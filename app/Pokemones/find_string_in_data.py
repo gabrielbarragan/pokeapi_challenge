@@ -1,3 +1,4 @@
+"""this module contains some functions for item 1 from houm challenge"""
 
 def get_key_data(data: dict, key: str):
     """this function get value in a key from data, return a list with values of key required"""
@@ -5,7 +6,6 @@ def get_key_data(data: dict, key: str):
     data_key = [element[key] for element in data["results"]]
 
     return data_key
-    
 
 
 def find_string_in_name(string_to_find: str, data: dict, times=1):

@@ -1,4 +1,4 @@
-from Pokemones.get_data import get_api_data
+from Pokemones.data import get_api_data
 def get_egg_group_url(specie_data):
     """This function get egg groups url from give specie and return a list with egg_groups"""
 

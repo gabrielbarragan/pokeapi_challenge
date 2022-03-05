@@ -1,6 +1,6 @@
 from Pokemones.find_string_in_data import find_string_in_name, get_key_data
-from Pokemones.get_data import get_api_data
-from Pokemones.get_egg_group import get_egg_group_url, count_species
+from Pokemones.data import get_api_data
+from Pokemones.egg_group import get_egg_group_url, count_species
 
 
 def count_names(data,first_string: str="",first_string_times:int=1, second_string: str="", second_string_times:int=0):
