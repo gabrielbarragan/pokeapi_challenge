@@ -16,15 +16,19 @@ if __name__ == '__main__':
 
     #contamos los nombres según las condiciones
     count_strings_in_names= count_names(all_pokemon,"at",1,"a",2)
-    print(f'En total hay {count_strings_in_names} pokemones que contienen en su nombre "at" y por lo menos 2 "a"')
+    if count_strings_in_names is not None:
+        print(f'En total hay {count_strings_in_names} pokemones que contienen en su nombre "at" y "a"')
+    else:
+        print("no se han podido contar los pokemones")
 
     #contamos la cantidad de especies que pueden procrear con Raichu
     species_to_couple = species_to_procreate(RAICHU_SPECIE_ENDPOINT)
     print(f'En total hay {species_to_couple} de pokemon que pueden procrear con Raichu')
 
     #get pokemons of an specific type
-    max_and_min_weight = get_weights_in_pokemon_of_type("fighting",151)
-    print (f'El peso máximo y el mínimo de los pokemones de tipo fighting son: {max_and_min_weight} respectivamente')
+    pokemon_type= "fighting"
+    max_and_min_weight = get_weights_in_pokemon_of_type(pokemon_type,151)
+    print (f'El peso máximo y el mínimo de los pokemones de tipo {pokemon_type} son: {max_and_min_weight} respectivamente')
 
 
 
