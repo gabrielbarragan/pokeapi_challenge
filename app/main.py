@@ -23,7 +23,8 @@ if __name__ == '__main__':
     print(f'En total hay {species_to_couple} de pokemon que pueden procrear con Raichu')
 
     #get pokemons of an specific type
-    print (f'El peso máximo y el mínimo de los pokemones de tipo fighting es: {get_weights_in_pokemon_of_type("fighting",151)} respectivamente')
+    max_and_min_weight = get_weights_in_pokemon_of_type("fighting",151)
+    print (f'El peso máximo y el mínimo de los pokemones de tipo fighting son: {max_and_min_weight} respectivamente')
 
 
 
