@@ -1,5 +1,5 @@
-from get_data import get_api_data
-from find_string_in_data import get_key_data, find_string_in_name
+from Pokemones.get_data import get_api_data
+from Pokemones.count_names import count_names
 
 from api_vars import POKEMON_ENDPOINT, API_URL
 
@@ -7,22 +7,9 @@ if __name__ == '__main__':
 
     all_pokemon = get_api_data(API_URL, POKEMON_ENDPOINT)
 
-    pokemon_names = get_key_data(all_pokemon,"name")
+    count_strings_in_names= count_names(all_pokemon,"at",1,"a",2)
 
-    find_at= find_string_in_name("at",pokemon_names)
-
-    find_a = find_string_in_name("a",find_at,2)
-
-    # print(find_at)
-    print(len(find_a))
-
-    # names_with_condition=[]
-
-    # for pokemon_name in pokemon_names:
-    #     if "at" in pokemon_name and pokemon_name.count("a") >= 2:
-    #         names_with_condition.append(pokemon_name)
-    # print(pokemon_names)
-    # print(len(names_with_condition))
+    print(count_strings_in_names)
     
         
 
