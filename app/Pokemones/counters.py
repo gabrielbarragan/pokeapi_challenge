@@ -17,12 +17,10 @@ def count_names(data,first_string: str="",first_string_times:int=0, second_strin
         find_second_string = find_string_in_name(second_string,find_first_string,second_string_times)
         return len(find_second_string)
     except:
-        raise ValueError("No se ha ejecutado correctamente la función find_string_in_name con el segundo string ")
-
-    
+        raise ValueError("No se ha ejecutado correctamente la función find_string_in_name con el segundo string ") 
 
 def count_species(list_group_url: list):
-    """this function combine the pokemon species from a pokemon, remove duplicates and return total quantity of species """
+    """this function receive a list of urls from eggs groups combine the pokemon species from a pokemon, remove duplicates and return total quantity of species """
 
     egg_groups_data=[]
     try:
@@ -36,7 +34,8 @@ def count_species(list_group_url: list):
         raise ValueError("Ha ocurrido un error al usar la función count_species()")
 
 def species_to_procreate(specie_endpoint: str):
-    """this function return quantity of species can be couple with raichu"""
+    """this function return quantity of species can be couple with given specie"""
+    
     try:
         data_specie = get_api_data(specie_endpoint)
     except:
